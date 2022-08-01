@@ -1,0 +1,22 @@
+[package]
+name = "rabbitmq-queue-size-alert"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["fs", "io-std", "macros", "rt-multi-thread", "io-util"] }
+lapin = "2.1.1"
+toml = "0.5.9"
+serde = { version = "1.0.139", features = ["derive"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde_json = "1.0.82"
+job_scheduler = "1.2.1"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+opt-level = "z"
+debug = false

@@ -1,0 +1,10 @@
+slack_webhook_url = "https://hooks.slack.com/...."
+
+cron = "0 0/5 * * * *"
+
+[[rabbit]]
+name = "CLUSTER_1"
+url = "amqp://user:pass@192.168.x.x:5672"
+[[rabbit.alerts]]
+queue_name = "queue_name"
+threshold = 123
