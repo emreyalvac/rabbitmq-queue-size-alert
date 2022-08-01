@@ -22,7 +22,7 @@ name = "${NAME}"
 url = "${URL}"
 [[rabbit.alert]] # Alert object
 queue_name = "${QUEUE_NAME}"
-threshold = ""${ THRESHOLD }" # Max message size *int
+threshold = "${ THRESHOLD }" # Max message size *int
 [[rabbit.alert]]
 # ...
 [[rabbit.alert]]
